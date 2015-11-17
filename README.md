@@ -25,7 +25,7 @@ Once you've explored the existing Media Ranker site, this project:
 - will need to be isolated into a gemset called 'MediaRanker'
   - create the necessary files for RVM to recognize a gemset
   - Use [better_errors](https://github.com/charliesome/better_errors) for debugging purposes
-- requires you to create a Rails 4.2.2 application
+- requires you to create a Rails application
   - conform to Rails conventions on naming and inflection
 
 ### Requirements
