@@ -29,7 +29,7 @@ Once you've explored the existing Media Ranker site, this project:
   - conform to Rails conventions on naming and inflection
   - by using `rails new .` you will create a new rails app _inside_ of the fork folder instead of creating a _new_ folder for your rails app
   
-**You shall submit a pull request once you are done with the baseline which shall be merged before moving onto implementing the requirements**
+**You shall submit a pull request _with a meaningful pull request description_ once you are done with the baseline which shall be merged before moving onto implementing the requirements**
 
 ### Requirements
 
