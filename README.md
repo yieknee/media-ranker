@@ -21,12 +21,15 @@ Before you start writing _any_ code:
 
 Once you've explored the existing Media Ranker site, this project:
 
-- requires an individual repo and branch
+- requires an individual branch and fork
 - will need to be isolated into a gemset called 'MediaRanker'
   - create the necessary files for RVM to recognize a gemset
   - Use [better_errors](https://github.com/charliesome/better_errors) for debugging purposes
 - requires you to create a Rails application
   - conform to Rails conventions on naming and inflection
+  - by using `rails new .` you will create a new rails app _inside_ of the fork folder instead of creating a _new_ folder for your rails app
+  
+**You shall submit a pull request once you are done with the baseline which shall be merged before moving onto implementing the requirements**
 
 ### Requirements
 
