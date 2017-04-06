@@ -70,6 +70,10 @@ Mimic the site's functionality around Users and Voting:
 - Add a page for each user, as well as a page showing a summary of all users
 - Make sure any models and controllers you've built so far are well-tested
 
+#### A note on logging in
+
+Passwords and security are tricky! We'll talk about that sort of thing a little in the coming weeks, but for now you don't need to provide any sort of security. The user gives you a username, and your site should just trust them.
+
 ### Wave 3
 
 Use Foundation to style the site to match the example. The layout as well as the look and feel should match as close as possible.
