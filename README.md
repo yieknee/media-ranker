@@ -20,15 +20,67 @@ The purpose of this assignment is to reinforce the following concepts:
 - Working with a CSS framework
 - Styling a page based on an existing design
 
-## Core Requirements
+## Project Requirements
 
-Regardless of how you choose to implement this project or how much of it gets done, you should
+### Core Requirements
 
-- Squeaky-clean git hygiene, including
+Regardless of how you choose to implement this project or how much of it gets done, you should exhibit
+
+- Squeaky-clean **git hygiene**, including
   - A fresh branch for each new feature
   - Regular commits
   - Descriptive commit messages
-- Fanatical devotion to test-driven development
+- Fanatical devotion to **test-driven development**
   - Pseudocode first, then write the tests, then write code to make them pass
-- Stalwart use of agile development practices
+- Steadfast adherence to **agile development practices**
   - User stories should be listed and prioritized using a Trello board
+  - The finished application should be deployed to Heroku (deploy early, deploy often)
+- Unrelenting use of **semantic HTML**
+
+### Baseline
+
+We will begin with some in-class work, exploring the site and pondering implementation details. Before you start writing _any_ code, you should:
+
+- Explore the existing Media Ranker site to become familiar with the necessary functionality
+- Create a Trello board to manage user stories
+- Create an ERD for the models
+
+Then, once you have a solid plan for how to structure your project:
+
+- Fork and clone the repo
+- Use `rails new .` to generate a new Rails project in the cloned directory
+  - Verify that the changes we've made to Rails' defaults (postgres as the DB, spec-style testing) have been applied
+- `git init`, `git add .` and `git commit -m "Initial Rails setup"`
+
+### Wave 1
+
+Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
+- Build a main page, with a list of the top 10 media of each category, as well as a spotlight section for the top media overall
+- Build an index page for each media category
+- Build a details page for each piece of media
+- Make sure any models and controllers you've built so far are well-tested
+
+### Wave 2
+
+Mimic the site's functionality around Users and Voting:
+- Allow users to "log in" to the site, and use the `session` to keep track of which user is currently logged in for a given browser
+- Allow users to vote for media, and sort media by vote count whenever a list of media is displayed
+- Add a list of voting users to the details page for each media
+- Don't allow a user to vote for the same media more than once
+- Add a page for each user, as well as a page showing a summary of all users
+- Make sure any models and controllers you've built so far are well-tested
+
+### Wave 3
+
+Use Foundation to style the site to match the example. The layout as well as the look and feel should match as close as possible.
+
+### Optional Enhancement Ideas
+
+Once your test coverage is comprehensive, your HTML is semantic, your user stories have all been moved to the `Done` column and your application has been deployed to Heroku, you may consider the following enhancements.
+
+1. DRY up your code as much as you can! Techniques worth investigating:
+    - Helper methods
+    - Controller filters
+    - Controller inheritance
+    - Polymorphic routes
+1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
