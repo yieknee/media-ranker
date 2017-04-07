@@ -14,11 +14,22 @@ The purpose of this assignment is to reinforce the following concepts:
 
 - Previous Rails learning, including MVC, RESTful routing, and the request cycle
 - Testing Rails applications
-- Building complex model logic, including custom validations and helper methods
+- Building complex model logic
 - Using `session` and `flash` to track data between requests
 - DRYing up Rails code
 - Working with a CSS framework
 - Styling a page based on an existing design
+
+## Before You Begin
+
+### Provided Files
+
+- `db/media_seeds.csv`: Some starter media to work with
+- `app/assets/images/owl.jpg`: The owl picture from the site
+
+### Regarding the Word "Media"
+
+The Rails inflector considers "media" to be the plural of "medium", which is not really what we mean here. You may want to choose a different word to represent "a book, movie or album" internally. The instructor-proved example site uses the word "work".
 
 ## Project Requirements
 
@@ -85,6 +96,5 @@ Once your test coverage is comprehensive, your HTML is semantic, your user stori
 1. DRY up your code as much as you can! Techniques worth investigating:
     - Helper methods
     - Controller filters
-    - Controller inheritance
     - Polymorphic routes
 1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
