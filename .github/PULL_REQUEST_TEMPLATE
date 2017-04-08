@@ -8,6 +8,7 @@ Congratulations! You're submitting your assignment!
 | Describe how you approached testing that model method. What edge cases did you come up with? |  |
 | Describe an edge case test you wrote for a controller |  |
 | What are `session` and `flash`? What is the difference between them? |  |
+| Describe a controller filter you wrote. |  |
 | What was one thing that you gained more clarity on through this assignment? |  |
 | What is the Heroku URL of your deployed application |  |
 
