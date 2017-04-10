@@ -1,53 +1,100 @@
 # Media Ranker
 
-In this project we will focus on build a simple rails app that has three data models (Movie, Album, Book). We will be focusing on rails request cycle comprehension and introducing testing to our rails applications. To maximize the focus on comprehension, students will implement features based off of an existing website (http://media-ranker.herokuapp.com).
+## Introduction
 
-### Goals
+In this project, you will build a webapp where users can vote for their favorite pieces of media.
 
-By the end of the project you should be able to:
+In contrast to previous projects, instead of implementing a pre-defined spec you will be imitating an existing site: http://media-ranker-2-0.herokuapp.com. Your job is to match the functionality and styling of this site as closely as possible.
 
-- Implement tests in a rails application
-- Use built-in model validators
-- Describe the rails request cycle in detail in your own words
+This is an individual, [stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/rule-of-three.md) project.
+
+## Learning Goals
+
+The purpose of this assignment is to reinforce the following concepts:
+
+- Previous Rails learning, including MVC, RESTful routing, and the request cycle
+- Testing Rails applications
+- Building complex model logic
+- Using `session` and `flash` to track data between requests
+- DRYing up Rails code
+- Working with a CSS framework
+- Styling a page based on an existing design
+
+## Before You Begin
+
+### Provided Files
+
+- `db/media_seeds.csv`: Some starter media to work with
+- `app/assets/images/owl.jpg`: The owl picture from the site
+
+### Regarding the Word "Media"
+
+The Rails inflector considers "media" to be the plural of "medium", which is not really what we mean here. You may want to choose a different word to represent "a book, movie or album" internally. The instructor-proved example site uses the word "work".
+
+## Project Requirements
+
+### Core Requirements
+
+Regardless of how you choose to implement this project or how much of it gets done, you should exhibit
+
+- Squeaky-clean **git hygiene**, including
+  - A fresh branch for each new feature
+  - Regular commits
+  - Descriptive commit messages
+- Fanatical devotion to **test-driven development**
+  - Pseudocode first, then write the tests, then write code to make them pass
+- Steadfast adherence to **agile development practices**
+  - User stories should be listed and prioritized using a Trello board
+  - The finished application should be deployed to Heroku (deploy early, deploy often)
+- Unrelenting use of **semantic HTML**
 
 ### Baseline
-Before you start writing _any_ code:
+
+We will begin with some in-class work, exploring the site and pondering implementation details. Before you start writing _any_ code, you should:
 
 - Explore the existing Media Ranker site to become familiar with the necessary functionality
-- If desired, create a Trello board to manage tasks
-- If desired, create an ERD diagram for the models (pen & paper first)
+- Create a Trello board to manage user stories
+- Create an ERD for the models
 
-Once you've explored the existing Media Ranker site, this project:
+Then, once you have a solid plan for how to structure your project:
 
-- requires an individual branch and fork
-- Use [better_errors](https://github.com/charliesome/better_errors) for debugging purposes
-- requires you to create a Rails application
-  - conform to Rails conventions on naming and inflection
-  - by using `rails new .` you will create a new rails app _inside_ of the fork folder instead of creating a _new_ folder for your rails app
-  
-**You shall submit a pull request _with a meaningful pull request description_ once you are done with the baseline which shall be merged before moving onto implementing the requirements. _Do not push any additional code until your baseline PR has been merged_**
+- Fork and clone the repo
+- Use `rails new .` to generate a new Rails project in the cloned directory
+  - Verify that the changes we've made to Rails' defaults (postgres as the DB, spec-style testing) have been applied
+- `git init`, `git add .` and `git commit -m "Initial Rails setup"`
 
-### Requirements
+### Wave 1
 
-#### Comprehension
+Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
+- Build a main page, with a list of the top 10 media of each category, as well as a spotlight section for the top media overall
+- Build an index page for each media category
+- Build a details page for each piece of media
+- Make sure any models and controllers you've built so far are well-tested
 
-Take your time to understand how the code is being executed during the request cycle. Use the skill check questions to drive your exploration. Work with your classmates to describe the flow of a specific request to any of the routes in your route file. You should be able to do this for all of the routes in your application.
+### Wave 2
 
-#### Wave 1
+Mimic the site's functionality around Users and Voting:
+- Allow users to "log in" to the site, and use the `session` to keep track of which user is currently logged in for a given browser
+- Allow users to vote for media, and sort media by vote count whenever a list of media is displayed
+- Add a list of voting users to the details page for each media
+- Don't allow a user to vote for the same media more than once
+- Add a page for each user, as well as a page showing a summary of all users
+- Make sure any models and controllers you've built so far are well-tested
 
-You must mimic **ALL** of the pages and **ALL** of the links and buttons on each of the pages located at http://media-ranker.herokuapp.com.
+#### A note on logging in
 
-Each data model needs to have standard RESTful (index, show, edit, update, new, create, destroy) routes.
+Passwords and security are tricky! We'll talk about that sort of thing a little in the coming weeks, but for now you don't need to provide any sort of security. The user gives you a username, and your site should just trust them.
 
-#### Wave 2
+### Wave 3
 
-Testing will come in Wave 2!
+Use Foundation to style the site to match the example. The layout as well as the look and feel should match as close as possible.
 
-#### Wave 3
+### Optional Enhancement Ideas
 
-Style will come in Wave 3!
+Once your test coverage is comprehensive, your HTML is semantic, your user stories have all been moved to the `Done` column and your application has been deployed to Heroku, you may consider the following enhancements.
 
-<!--
-- [Tuesday] requires one preliminary passing RSpec test that confirms that your web application can render the root route
-  - the `spec` folder should be created at the top-level of the application
--->
+1. DRY up your code as much as you can! Techniques worth investigating:
+    - Helper methods
+    - Controller filters
+    - Polymorphic routes
+1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
