@@ -67,8 +67,10 @@ Then, once you have a solid plan for how to structure your project:
 
 Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
 - Build a main page, with a list of the top 10 media of each category, as well as a spotlight section for the top media overall
-- Build an index page for each media category
+- Build an index page with a list of all works for each category
+- Allow users to add new works
 - Build a details page for each piece of media
+- Allow users to edit and delete works
 - Make sure any models and controllers you've built so far are well-tested
 
 ### Wave 2
@@ -87,7 +89,7 @@ Passwords and security are tricky! We'll talk about that sort of thing a little 
 
 ### Wave 3
 
-Use Foundation to style the site to match the example. The layout as well as the look and feel should match as close as possible.
+Use Foundation and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
 
 ### Optional Enhancement Ideas
 
@@ -96,5 +98,5 @@ Once your test coverage is comprehensive, your HTML is semantic, your user stori
 1. DRY up your code as much as you can! Techniques worth investigating:
     - Helper methods
     - Controller filters
-    - Polymorphic routes
+1. Build category-specific pages for `index` and `new` (e.g. `/books` or `/movies/new`). These should be as DRY as possible. You might be interested in investigating _polymorphic routes_.
 1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
