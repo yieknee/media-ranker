@@ -61,7 +61,7 @@ Then, once you have a solid plan for how to structure your project:
 - Fork and clone the repo
 - Use `rails new .` to generate a new Rails project in the cloned directory
   - Verify that the changes we've made to Rails' defaults (postgres as the DB, spec-style testing) have been applied
-- `git init`, `git add .` and `git commit -m "Initial Rails setup"`
+- `git add .` and `git commit -m "Initial Rails setup"`
 
 ### Wave 1
 
