@@ -71,7 +71,7 @@ Mimic the site's basic functionality around Media, without worrying (yet) about 
 - Allow users to add new works
 - Build a details page for each piece of media
 - Allow users to edit and delete works
-- Make sure any models and controllers you've built so far are well-tested
+- Make sure any models you've built so far are well-tested
 
 ### Wave 2
 
@@ -81,7 +81,7 @@ Mimic the site's functionality around Users and Voting:
 - Add a list of voting users to the details page for each media
 - Don't allow a user to vote for the same media more than once
 - Add a page for each user, as well as a page showing a summary of all users
-- Make sure any models and controllers you've built so far are well-tested
+- Make sure any models you've built so far are well-tested
 
 #### A note on logging in
 
