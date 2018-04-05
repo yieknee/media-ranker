@@ -12,7 +12,6 @@ Semantic HTML |
 Errors are reported to the user |
 Business logic lives in the models |
 Models are thoroughly tested, including relations, validations and any custom logic |
-Controllers are thoroughly tested |
 **Wave 1 - Media** |
 Splash page shows the three media categories |
 Basic CRUD operations on media are present and functional |
