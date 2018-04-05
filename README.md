@@ -100,3 +100,6 @@ Once your test coverage is comprehensive, your HTML is semantic, your user stori
     - Controller filters
 1. Build category-specific pages for `index` and `new` (e.g. `/books` or `/movies/new`). These should be as DRY as possible. You might be interested in investigating _polymorphic routes_.
 1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
+
+## What we're looking for
+You can find what instructors will be looking for in the [feedback](feedback.md) markdown document.
