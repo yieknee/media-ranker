@@ -8,7 +8,7 @@ Git hygiene |
 Comprehension questions	|
 **General** |
 Rails fundamentals (RESTful routing, use of named paths) |
-Semantic HTML |
+Views are well-organized (DRY, use of semantic HTML, use of partials) |
 Errors are reported to the user |
 Business logic lives in the models |
 Models are thoroughly tested, including relations, validations and any custom logic |
