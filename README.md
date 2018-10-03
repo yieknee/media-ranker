@@ -71,7 +71,10 @@ Mimic the site's basic functionality around Media, without worrying (yet) about 
 - Allow users to add new works
 - Build a details page for each piece of media
 - Allow users to edit and delete works
-- Make sure any models you've built so far are well-tested
+
+**Testing:**
+
+All model validations should be tested **before** moving onto Wave 2. Creating a new work and editing a work should give you hints on how to set these up and test them.
 
 ### Wave 2
 
@@ -81,7 +84,10 @@ Mimic the site's functionality around Users and Voting:
 - Add a list of voting users to the details page for each media
 - Don't allow a user to vote for the same media more than once
 - Add a page for each user, as well as a page showing a summary of all users
-- Make sure any models you've built so far are well-tested
+
+**Testing:**
+
+All tests from Wave 1 should continue to pass with the new code added in Wave 2. All new model validations should be tested **before** moving onto Wave 3. Focus on voting since this logic is the most complex part of Wave 2. 
 
 #### A note on logging in
 
