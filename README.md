@@ -89,7 +89,7 @@ Passwords and security are tricky! We'll talk about that sort of thing a little 
 
 ### Wave 3
 
-Use Foundation and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
+Use Bootstrap and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
 
 ### Optional Enhancement Ideas
 

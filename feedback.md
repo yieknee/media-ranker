@@ -24,6 +24,6 @@ All media lists are ordered by vote count |
 Splash page contains a media spotlight |
 Media pages contain lists of voting users |
 **Wave 3 - Styling** |
-Foundation is used appropriately |
+Bootstrap is used appropriately |
 Look and feel is similar to the original |
 **Overall** |
