@@ -104,7 +104,7 @@ Passwords and security are tricky! We'll talk about that sort of thing a little 
 
 ### Optional Enhancement Ideas
 
-Use Foundation and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
+Use Bootstrap and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
 
 Once your test coverage is comprehensive, your HTML is semantic, your user stories have all been moved to the `Done` column and your application has been deployed to Heroku, you may consider the following enhancements.
 
