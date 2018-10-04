@@ -66,7 +66,7 @@ Then, once you have a solid plan for how to structure your project:
 ### Wave 1
 
 Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
-- Build a main page, with a list of the top 10 media of each category, as well as a spotlight section for the top media overall
+- Build a main page, with a list of the media for each category, as well as a spotlight section for the top media overall (don't worry about the top 10 part right now)
 - Build an index page with a list of all works for each category
 - Allow users to add new works
 - Build a details page for each piece of media
@@ -82,6 +82,7 @@ Mimic the site's basic functionality around Media, without worrying (yet) about 
 
 Mimic the site's functionality around Users and Voting:
 - Allow users to "log in" to the site, and use the `session` to keep track of which user is currently logged in for a given browser
+- Allow the users to see the top 10 for each media type on the main page
 - Allow users to vote for media, and sort media by vote count whenever a list of media is displayed
 - Add a list of voting users to the details page for each media
 - Don't allow a user to vote for the same media more than once
@@ -99,11 +100,9 @@ Focus on testing voting logic since this is the most complex part of Wave 2.
 
 Passwords and security are tricky! We'll talk about that sort of thing a little in the coming weeks, but for now you don't need to provide any sort of security. The user gives you a username, and your site should just trust them.
 
-### Wave 3
+### Optional Enhancement Ideas
 
 Use Foundation and CSS to style the site to match the example. The layout as well as the look and feel should match as close as possible.
-
-### Optional Enhancement Ideas
 
 Once your test coverage is comprehensive, your HTML is semantic, your user stories have all been moved to the `Done` column and your application has been deployed to Heroku, you may consider the following enhancements.
 
