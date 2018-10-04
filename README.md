@@ -17,8 +17,6 @@ The purpose of this assignment is to reinforce the following concepts:
 - Building complex model logic
 - Using `session` and `flash` to track data between requests
 - DRYing up Rails code
-- Working with a CSS framework
-- Styling a page based on an existing design
 
 ## Before You Begin
 
@@ -65,6 +63,8 @@ Then, once you have a solid plan for how to structure your project:
 
 ### Wave 1
 
+In this wave, you should build some functionality, and then build the tests for that functionality. We recommend doing the read and create operations first, then writing tests, then completing the update and delete operations.
+
 Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
 - Build a main page, with a list of the media for each category, as well as a spotlight section for the top media overall (don't worry about the top 10 part right now)
 - Build an index page with a list of all works for each category
@@ -82,11 +82,9 @@ Mimic the site's basic functionality around Media, without worrying (yet) about 
 
 Mimic the site's functionality around Users and Voting:
 - Allow users to "log in" to the site, and use the `session` to keep track of which user is currently logged in for a given browser
-- Allow the users to see the top 10 for each media type on the main page
 - Allow users to vote for media, and sort media by vote count whenever a list of media is displayed
-- Add a list of voting users to the details page for each media
 - Don't allow a user to vote for the same media more than once
-- Add a page for each user, as well as a page showing a summary of all users
+- Allow the users to see the top 10 for each media type on the main page
 
 #### Testing
 **Before** moving on to Wave 3 you need to have:
@@ -99,6 +97,10 @@ Focus on testing voting logic since this is the most complex part of Wave 2.
 #### A note on logging in
 
 Passwords and security are tricky! We'll talk about that sort of thing a little in the coming weeks, but for now you don't need to provide any sort of security. The user gives you a username, and your site should just trust them.
+
+### Wave 3
+- Add a list of voting users to the details page for each media
+- Add a page for each user, as well as a page showing a summary of all users
 
 ### Optional Enhancement Ideas
 
