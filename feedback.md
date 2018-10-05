@@ -18,12 +18,13 @@ Basic CRUD operations on media are present and functional |
 **Wave 2 - Users and Votes** |
 Users can log in and log out |
 The ID of the current user is stored in the session |
-Individual user pages and the user list are present |
 A user cannot vote for the same media more than once |
 All media lists are ordered by vote count |
 Splash page contains a media spotlight |
+**Wave 3 - Users and Votes** |
 Media pages contain lists of voting users |
-**Wave 3 - Styling** |
+Individual user pages and the user list are present |
+**Optional - Styling** |
 Bootstrap is used appropriately |
 Look and feel is similar to the original |
 **Overall** |
