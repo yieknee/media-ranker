@@ -12,6 +12,7 @@ Views are well-organized (DRY, use of semantic HTML, use of partials) |
 Errors are reported to the user |
 Business logic lives in the models |
 Models are thoroughly tested, including relations, validations and any custom logic |
+Controllers are thoroughly tested, including the login/logout process and multi-step workflows like voting for a work |
 **Wave 1 - Media** |
 Splash page shows the three media categories |
 Basic CRUD operations on media are present and functional |
