@@ -66,17 +66,29 @@ Then, once you have a solid plan for how to structure your project:
 In this wave, you should build some functionality, and then build the tests for that functionality. We recommend doing the read and create operations first, then writing tests, then completing the update and delete operations.
 
 Mimic the site's basic functionality around Media, without worrying (yet) about Users or Votes:
-- Build a main page, with a list of the media for each category, as well as a spotlight section for the top media overall (don't worry about the top 10 part right now)
+- Build a main page, with a list of the media for each category, as well as a spotlight section for the top media overall.
+    - Since we don't have votes yet, for both the spotlight and top-10 sections you should select works at random (i.e. using `.sample`)
 - Build an index page with a list of all works for each category
 - Allow users to add new works
 - Build a details page for each piece of media
 - Allow users to edit and delete works
 
+#### Organization
+
+Think about what functionality should live in the model. Given that the way you select the spotlight and top-10 are going to change in a future wave, how can you isolate this business logic to make it easy to change?
+
 #### Testing
-**Before** moving on to Wave 2 you need to have model tests for:
-- Presence of required attributes
-- Uniqueness of attributes
-- Valid values for specific attributes
+
+**Before** moving on to wave 2, your project should contain the following tests
+
+**Model Testing**
+- All validations and should be tested
+- All custom methods should be tested
+    - For top-10 or spotlight, what if there are less than 10 works? What if there are no works?
+
+**Controller Testing**
+- Tests for standard CRUD operations on works
+- Does the main page load if there are no works?
 
 ### Wave 2
 
@@ -84,13 +96,24 @@ Mimic the site's functionality around Users and Voting:
 - Allow users to "log in" to the site, and use the `session` to keep track of which user is currently logged in for a given browser
 - Allow users to vote for media, and sort media by vote count whenever a list of media is displayed
 - Don't allow a user to vote for the same media more than once
-- Allow the users to see the top 10 for each media type on the main page
+- Change the media spotlight and top-10 to respect vote count
 
 #### Testing
-**Before** moving on to Wave 3 you need to have:
-- Tests from Wave 1 passing
-- Presence and uniqueness validation tests for any new models
-- Relationship tests
+
+**Before** moving on to wave 3, your project should contain the following tests
+
+**Model Testing**
+- All validations for new models should be tested
+- All relations between models should be tested
+- Your tests for custom model methods should be updated to reflect the presence of votes
+    - How do top-10 and spotlight handle works with no votes? Ties in the number of votes?
+
+**Controller Testing**
+- Tests for all individual actions
+- Authentication tests combining multiple actions
+    - A guest user cannot vote if they have not logged in
+    - A logged-in user can vote for a work they haven't already voted for
+    - A logged-in user cannot vote for a work they have voted for
 
 Focus on testing voting logic since this is the most complex part of Wave 2.
 
