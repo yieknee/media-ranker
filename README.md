@@ -111,9 +111,9 @@ Mimic the site's functionality around Users and Voting:
 **Controller Testing**
 - Tests for all individual actions
 - Authentication tests combining multiple actions
-    - A guest user cannot vote if they have not logged in
-    - A logged-in user can vote for a work they haven't already voted for
-    - A logged-in user cannot vote for a work they have voted for
+    - A guest user _cannot_ vote if they have not logged in
+    - A logged-in user _can_ vote for a work they haven't already voted for
+    - A logged-in user _cannot_ vote for a work they have previously voted for
 
 Focus on testing voting logic since this is the most complex part of Wave 2.
 
