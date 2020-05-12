@@ -47,12 +47,12 @@ However, the Rails inflector considers "media" to be the plural of "medium", whi
 
 Inside of the `db` folder, we have included two files:
 
-- `media-seeds.csv`
+- `works-seeds.csv`
 - `generate_starter_data.rb`
 
-You are encouraged to build your own `seeds.rb` script using the `media-seeds.csv` file, so that you can run `rails db:seed`. You are encouraged to reference other seeds scripts you may have!
+You are encouraged to build your own `seeds.rb` script using the `works-seeds.csv` file, so that you can run `rails db:seed`. You are encouraged to reference other seeds scripts you may have!
 
-The file `generate_starter_data.rb` is a script to help generate a new `media-seeds.csv` file. There are comments in the file about its use. You are not required to use this file.
+The file `generate_starter_data.rb` is a script to help generate a new `works-seeds.csv` file. There are comments in the file about its use. You are not required to use this file.
 
 ---
 
