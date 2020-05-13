@@ -4,6 +4,7 @@
 
 - Individual, [stage 2](https://github.com/Ada-Developers-Academy/pedagogy/blob/master/classroom/rule-of-three.md#stage-2) project
 - Due before class on **DATE HERE**
+- Submit this project with a PR
 
 ## Learning Goals
 
@@ -41,7 +42,7 @@ Then, once you have a solid plan for how to structure your project, follow these
 
 Our project is called Media Ranker, and revolves around voting on media. You may suspect that "A Single Piece of Media," or "Media," is going to be a model.
 
-However, the Rails inflector considers "media" to be the plural of "medium", which is not really what we mean here. You may want to choose a different word to represent "a book, movie or album" internally. The instructor-proved example site uses the word "work".
+However, the Rails inflector considers "media" to be the plural of "medium", which is not really what we mean here. You may want to choose a different word to represent "a book, movie or album" internally. The instructor-proved example site uses the word "Work" as the name for the model.
 
 ### What We've Included
 
@@ -115,6 +116,7 @@ Mimic the site's functionality around Users and Voting:
 Refactor your current site to utilize this new functionality:
 - Change the media spotlight and top-10 to respect vote count
 - All lists of media (including top ten lists on the front page) are sorted in a specific way on the demo site. How? Implement this sorting on your site
+- Lists of media/tables of media/containers of media are shown on the website in different ways and contexts. Which of these lists/tables/containers of media can be refactored to use a view partial?
 
 ### Required Testing: Models
 
@@ -154,14 +156,15 @@ Passwords and security are tricky! We'll talk about that sort of thing a little 
 1. Write the controller tests for all CRUD operations
 1. Write the controller tests for the nominal test cases of voting functionality
 1. Write the controller tests for the edge test cases of voting functionality
+1. DRY up your code as much as you can! Techniques worth investigating:
+    - Helper methods
+    - Controller filters
+    - View Partials
 
 ### Low Priority Optionals
 
 Once your test coverage is comprehensive, your HTML is semantic, your user stories have all been moved to the `Done` column and your application has been deployed to Heroku, you may consider the following enhancements:
 
-1. DRY up your code as much as you can! Techniques worth investigating:
-    - Helper methods
-    - Controller filters
 1. Build category-specific pages for `index` and `new` (e.g. `/books` or `/movies/new`). These should be as DRY as possible. You might be interested in investigating _polymorphic routes_.
 1. Add a [recommendation system](https://www.toptal.com/algorithms/predicting-likes-inside-a-simple-recommendation-engine) that suggests media to a user based on what they have previously voted for.
 
