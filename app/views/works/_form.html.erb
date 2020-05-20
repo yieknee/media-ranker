@@ -1,0 +1,33 @@
+<% if @work.errors.any? %>
+  <ul class="errors">
+    <% @work.errors.each do |column, message| %>
+      <li>
+        <strong><%= column.capitalize %></strong> <%= message %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<main>
+  <h2>Add a new work</h2>
+  <section>
+    <%= form_with model: @work do |f| %>
+      <%= f.label :Category %>
+      <%= f.select :category, ['album', 'book', 'movie']  %>
+
+      <%= f.label :Title %>
+      <%= f.text_field :title %>
+
+      <%= f.label :Creator %>
+      <%= f.text_field :creator %>
+
+      <%= f.label :Publication_Year %>
+      <%= f.text_field :publication_Year %>
+
+      <%= f.label :Description %>
+      <%= f.text_field :description %>
+
+      <%= f.submit "#{action_name} Work" %>
+   <% end %>
+  </section>
+  </main>
