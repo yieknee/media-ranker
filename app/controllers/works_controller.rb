@@ -7,6 +7,15 @@ class WorksController < ApplicationController
    @work = Work.new
   end
 
+  def show
+    work_id = params[:id]
+    @work = Work.find_by(id: work_id)
+    if @work.nil?
+      head :not_found
+      return
+    end
+  end
+
   def create
     @work = Work.new(work_params)
    

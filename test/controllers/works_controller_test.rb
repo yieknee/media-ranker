@@ -1,10 +1,12 @@
 require "test_helper"
 
 describe WorksController do
+  before do
+    @work = Work.create(title:'Where the Wild Things Are', creator: 'Maurice Sendak')
+  end
+  
   describe "index" do
     it "responds with success when there are works saved" do
-     
-      work = works(:winnie_the_pooh)
 
       get(works_path)
      
@@ -18,6 +20,19 @@ describe WorksController do
       get(works_path)
      
       must_respond_with :success
+    end
+  end
+
+  describe "show" do
+    it "responds with success when showing an existing valid work" do
+
+      get(work_path(@work.id))
+      must_respond_with :success
+    end
+
+    it "responds with 404 with an invalid work id" do
+      get(work_path(00000000))
+      must_respond_with :not_found
     end
   end
 
