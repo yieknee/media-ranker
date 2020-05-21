@@ -8,7 +8,7 @@
       <button class="btn btn-primary"><%= link_to 'Back to media ranks', root_path %></button>
       <button class="btn btn-primary"><%= link_to 'Edit', edit_work_path %></button>
       <button class="btn btn-primary" rel="nofollow" data-method="post">Upvote</button>
-      <button class="btn btn-danger" data-confirm="Are you sure?" rel="nofollow" data-method="delete">Delete</button>
+      <button class="btn btn-danger" data-confirm="Are you sure?" rel="nofollow"><%= link_to 'Delete', work_path(@work.id), method: :delete, data: {confirm: "Are you sure?"} %></button>
     </section>
   </section>
 

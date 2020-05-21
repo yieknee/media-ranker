@@ -50,8 +50,46 @@ describe WorksController do
     end
 
     it "does not create a work if the form data violates work validations, and responds with rendering new form again" do
-      expect{post(works_path, params: {work:{catergory:'book'}})}.wont_change 'Work.count'
+      expect{post(works_path, params: {work:{category:'book'}})}.wont_change 'Work.count'
       must_respond_with :bad_request
     end
   end
+
+  describe "update" do
+    it "can update an existing work with valid information accurately, and redirect" do
+
+      new_work_hash = {
+        work: {
+          title: "Where the Wild Things Are",
+          category: "book",
+        },
+      }
+
+      expect {
+        patch work_path(@work.id), params: new_work_hash
+      }.wont_change "Work.count"
+  
+      must_respond_with :redirect
+  
+      work = Work.find_by(id: @work.id)
+      expect(work.title).must_equal new_work_hash[:work][:title]
+      expect(work.category).must_equal new_work_hash[:work][:category]
+      
+    end
+  end
+
+  describe "destroy" do
+    it "destroys the work instance in db when work exists, then redirects" do
+      
+      expect {delete(work_path(@work.id)) }.must_differ 'Work.count', -1
+      must_respond_with :redirect
+    end
+
+    it "does not change the db when the work does not exist, then responds with " do
+     
+      expect {delete(work_path(143256)) }.must_differ 'Work.count', 0
+      must_respond_with :redirect
+    end
+  end
+
 end
