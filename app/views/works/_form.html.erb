@@ -11,23 +11,26 @@
 <main>
   <h2>Add a new work</h2>
   <section>
-    <%= form_with model: @work do |f| %>
+    <%= form_with model: @work, html:{class: "form-group"} do |f| %>
       <%= f.label :Category %>
-      <%= f.select :category, ['album', 'book', 'movie']  %>
+      <%= f.select :category, ['album', 'book', 'movie'], html:{class: "form-control"}  %>
 
       <%= f.label :Title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, html:{class: "form-group"} %>
 
       <%= f.label :Creator %>
-      <%= f.text_field :creator %>
+      <%= f.text_field :creator, html:{class: "form-group"} %>
 
       <%= f.label :Publication_Year %>
-      <%= f.text_field :publication_Year %>
+      <%= f.text_field :publication_Year, html:{class: "form-group"} %>
 
       <%= f.label :Description %>
-      <%= f.text_field :description %>
+      <%= f.text_field :description, html:{class: "form-group"} %>
 
       <%= f.submit "#{action_name} Work" %>
    <% end %>
   </section>
   </main>
+
+
+  
