@@ -17,7 +17,7 @@
       <h2 class="top-ten__header">
         Top Movies
       </h2>
-      <% movies = @works.where(category: 'movie') %>
+      <% movies = Work.top_ten(category:'movie') %>
       <% movies.each do |movie| %>
         <ul class="list-group top-ten__list">
           <li class="list-group-item">
@@ -35,7 +35,7 @@
       <h2 class="top-ten__header">
         Top Books
       </h2>
-      <% books = @works.where(category: 'book') %>
+      <% books = Work.top_ten(category: 'book') %>
       <% books.each do |book| %>
         <ul class="list-group top-ten__list">
           <li class="list-group-item">
@@ -53,7 +53,7 @@
       <h2 class="top-ten__header">
         Top Albums
       </h2>
-      <% albums = @works.where(category: 'album') %>
+      <% albums = Work.top_ten(category: 'album') %>
       <% albums.each do |album| %>
         <ul class="list-group top-ten__list">
           <li class="list-group-item">
