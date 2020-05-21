@@ -5,14 +5,20 @@ class UsersController < ApplicationController
 
   def login
     username = params[:user][:username]
+    user = User.new(username: username)
     @user = User.find_by(username: username)
-    if @user
-      session[:user_id] = @user.id
-      flash[:success] = "Successfully logged in as returning user #{username}"
+    if user.valid?
+      if @user
+        session[:user_id] = @user.id
+        flash[:success] = "Successfully logged in as returning user #{username}"
+      else
+        @user = User.create(username: username)
+        session[:user_id] = @user.id
+        flash[:success] = "Successfully logged in as new user #{username}"
+      end
     else
-      @user = User.create(username: username)
-      session[:user_id] = @user.id
-      flash[:success] = "Successfully logged in as new user #{username}"
+      flash.now[:error] = "Error: Could not log in"
+      return
     end
   
     redirect_to root_path
