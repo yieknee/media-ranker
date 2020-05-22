@@ -6,7 +6,7 @@
       <%= link_to spotlight.title, work_path(spotlight.id)  %> by  <%= spotlight.creator %>
     </h2>
     <p class="spotlight__description">
-      19 votes - <%= spotlight.description %>
+      <%=spotlight.votes.count%> <%=spotlight.votes.count > 1 ? 'votes' : 'vote' %> - <%= spotlight.description %>
     </p>
   </section>
 
@@ -25,7 +25,7 @@
               <%= link_to movie.title, work_path(movie.id)   %>
               <small class="top-ten__creator">by <%= movie.creator %></small>
             </h4>
-            <p>13 votes</p> <%# will work on this to count votes %>
+            <p><%= movie.votes.count%> <%= movie.votes.count > 1? 'votes' : 'vote'%></p>
           </li>
         </ul>
       <% end %>
@@ -43,7 +43,7 @@
               <%= link_to book.title, work_path(book.id)   %>
               <small class="top-ten__creator">by <%= book.creator %></small>
             </h4>
-            <p>10 votes</p> <%# will work on this to count votes %>
+            <p><%= book.votes.count%> <%= book.votes.count > 1? 'votes' : 'vote'%></p> 
           </li>
         </ul>
       <% end %>
@@ -61,7 +61,7 @@
               <%= link_to album.title, work_path(album.id)   %>
               <small class="top-ten__creator">by <%= album.creator %></small>
             </h4>
-            <p>9 votes</p> <%# will work on this to count votes %>
+            <p><%= album.votes.count%> <%= album.votes.count > 1? 'votes' : 'vote'%></p> <%# will work on this to count votes %>
           </li>
         </ul>
       <% end %>

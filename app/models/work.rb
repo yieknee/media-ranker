@@ -1,22 +1,20 @@
 class Work < ApplicationRecord
   validates :title, presence: true, uniqueness: true
+  has_many :votes
+  has_many :users, through: :votes
 
   def self.spotlight
     works = Work.all
-    return works.sample
+    max = 0
+    works.each do |work|
+      max = work.votes.count if work.votes.count > max
+    end
+    return works.select{|work| work.votes.count == max }.sample
   end
 
   def self.top_ten(category: category)
     works = Work.where(category: category)
-    top_ten = []
-    if works.count < 10
-      top_ten = works
-    else
-      10.times do
-        top_ten << works.sample
-      end
-    end
-    return top_ten
+    return works.sort_by{|work| -work.votes.count}.take(10)
   end
 
 end

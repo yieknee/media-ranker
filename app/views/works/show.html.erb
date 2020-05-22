@@ -5,15 +5,17 @@
     <p>Published: <%= @work.publication_year %></p>
     <p><%= @work.description %></p>
     <section>
-      <button class="btn btn-primary"><%= link_to 'Back to media ranks', root_path %></button>
-      <button class="btn btn-primary"><%= link_to 'Edit', edit_work_path %></button>
-      <button class="btn btn-primary" rel="nofollow" data-method="post">Upvote</button>
-      <button class="btn btn-danger" data-confirm="Are you sure?" rel="nofollow"><%= link_to 'Delete', work_path(@work.id), method: :delete, data: {confirm: "Are you sure?"} %></button>
+      <%= link_to 'Back to media ranks', root_path, class:"btn btn-primary" %>
+      <%= link_to 'Edit', edit_work_path, class:"btn btn-primary" %>
+      <%= link_to 'Upvote', work_votes_path(@work.id), method: :post, class:"btn btn-primary" %>
+      <%= link_to 'Delete', work_path(@work.id), method: :delete, data: {confirm: "Are you sure?"}, class:"btn btn-danger" %>
     </section>
   </section>
 
   <section class="works-votes__container">
-    <h3 class="works-votes__header">23 Votes for this Album</h3>
+    <h3 class="works-votes__header">
+      <%= @work.votes.count %> Votes for this <%=@work.category.capitalize%>
+    </h3>
     <table class="table">
       <thead>
         <tr>
@@ -21,25 +23,14 @@
           <th>Date</th>
         </tr>
       </thead>
+      <%votes = @work.votes%>
       <tbody>
-        <tr>
-          <td>vera</td>
-          <td>May 21, 2020</td>
-        
-        </tr>
-        
-        <tr>
-          <td>chelsea</td>
-          <td>May 20, 2020</td>
-        
-        </tr><tr>
-          <td>hasa</td>
-          <td>May 20, 2020</td>
-        
-        </tr>
-        <tr>
-          <td>bis</td>
-          <td>May 20, 2020</td>
+        <%votes.each do |vote|%>
+          <tr>
+            <td><%= User.find_by(id: vote.user_id).username%></td>
+            <td><%= vote.created_at.strftime('%B %d, %Y') %></td>
+          </tr>
+        <%end%>
       </tbody>
     </table>
   </section>

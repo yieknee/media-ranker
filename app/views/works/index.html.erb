@@ -17,11 +17,11 @@
         <% albums = @works.where(category: 'album') %>
         <% albums.each do |album| %>
           <tr>
-            <td>votes#</td>
+            <td><%= album.votes.count %></td>
             <td><%= link_to album.title, work_path(album.id) %></td>
             <td><%= album.creator%></td>
             <td><%= album.publication_year%></td>
-            <td><button class="btn btn-primary" rel="nofollow">Upvote</a></td>
+            <td><button class="btn btn-primary" rel="nofollow"><%= link_to 'Upvote', work_votes_path(album.id), method: :post %></button></td>
           </tr>
         <%end%>
       </tbody>
@@ -44,11 +44,11 @@
         <% books = @works.where(category: 'book') %>
         <% books.each do |book| %>
           <tr>
-            <td>votes#</td>
+            <td><%= book.votes.count %></td>
             <td><%= link_to book.title, work_path(book.id) %></td>
             <td><%= book.creator%></td>
             <td><%= book.publication_year%></td>
-            <td><button class="btn btn-primary" rel="nofollow">Upvote</a></td>
+            <td><button class="btn btn-primary" rel="nofollow"><%= link_to 'Upvote', work_votes_path(book.id), method: :post %></button></td>
           </tr>
         <%end%>
       </tbody>
@@ -71,11 +71,11 @@
         <% movies = @works.where(category: 'movie') %>
         <% movies.each do |movie| %>
           <tr>
-            <td>votes#</td>
+            <td><%= movie.votes.count %></td>
             <td><%= link_to movie.title, work_path(movie.id) %></td>
             <td><%= movie.creator%></td>
             <td><%= movie.publication_year%></td>
-            <td><button class="btn btn-primary" rel="nofollow">Upvote</a></td>
+            <td><button class="btn btn-primary" rel="nofollow"><%= link_to 'Upvote', work_votes_path(movie.id), method: :post %></button></td>
           </tr>
         <%end%>
       </tbody>
