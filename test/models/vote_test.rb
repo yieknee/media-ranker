@@ -36,6 +36,12 @@ describe Vote do
     it 'relates to work' do
       expect(@vote_work).must_equal @work
     end
+  end
 
+  describe 'double vote' do
+    it 'does not allow user to vote for the same work twice' do
+      duplicate_vote = Vote.create(work_id: @work.id, user_id: @user.id)
+      expect(duplicate_vote.valid?).must_equal false
+    end
   end
 end
