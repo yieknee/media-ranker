@@ -1,5 +1,4 @@
 class Work < ApplicationRecord
-  validates :title, presence: true, uniqueness: true
   has_many :votes
   has_many :users, through: :votes
 
@@ -14,7 +13,10 @@ class Work < ApplicationRecord
 
   def self.top_ten(category: category)
     works = Work.where(category: category)
-    return works.sort_by{|work| -work.votes.count}.take(10)
+    top_ten = works.sort_by{|work| -work.votes.count}.take(10)
+    return top_ten
   end
+
+  validates :title, presence: true, uniqueness: true
 
 end

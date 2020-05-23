@@ -1,15 +1,67 @@
-winnie_the_pooh:
+book1:
   category: book
   title: Winnie the Pooh
   creator: A. A. Milne
   publication_year: '1926'
   description: Winnie-the-Pooh, also called Pooh Bear and Pooh, is a fictional anthropomorphic teddy bear created by English author A. A. Milne. The first collection of stories about the character was the book Winnie-the-Pooh, and this was followed by The House at Pooh Corner. '
-dark_knight:
+book2:
+  category: book
+  title: Where the Wild Things Are
+  creator: Maurice Sendak
+  publication_year: '1963'
+  description: Boy meets imaginary monsters
+book3:
+  category: book
+  title: test book 3
+book4:
+  category: book
+  title: test book 4
+book5:
+  category: book
+  title: test book 5
+book6:
+  category: book
+  title: test book 6
+book7:
+  category: book
+  title: test book 7
+book8:
+  category: book
+  title: test book 8
+book9:
+  category: book
+  title: test book 9
+book10:
+  category: book
+  title: test book 10
+book11:
+  category: book
+  title: test book 11
+book12:
+  category: book
+  title: test book 12
+movie1:
   category: movie
   title: The Dark Knight
-big_fish_theory:
+movie2:
+  category: movie
+  title: Paris is Burning
+album1:
   category: album
   title: Big Fish Theory
   creator: Vince Staples
   publication_year: '2017'
+album2:
+  category: album
+  title: The Gift
+  creator: Beyonce
+  publication_year: '2019'
+album3:
+  category: album
+  title: Lemonade
+  creator: Beyonce
+  publication_year: '2016'
+
+
+
 

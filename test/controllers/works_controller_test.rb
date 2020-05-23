@@ -2,7 +2,7 @@ require "test_helper"
 
 describe WorksController do
   before do
-    @work = Work.create(title:'Where the Wild Things Are', creator: 'Maurice Sendak')
+    @work = works(:book1)
   end
   
   describe "index" do
@@ -56,11 +56,11 @@ describe WorksController do
   end
 
   describe "update" do
-    it "can update an existing work with valid information accurately, and redirect" do
+    it "can update an existing work with valid information accurately" do
 
       new_work_hash = {
         work: {
-          title: "Where the Wild Things Are",
+          title: "test book",
           category: "book",
         },
       }
@@ -68,8 +68,6 @@ describe WorksController do
       expect {
         patch work_path(@work.id), params: new_work_hash
       }.wont_change "Work.count"
-  
-      must_respond_with :redirect
   
       work = Work.find_by(id: @work.id)
       expect(work.title).must_equal new_work_hash[:work][:title]

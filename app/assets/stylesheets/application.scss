@@ -25,6 +25,7 @@ line-height: 1.5;
 color: #212529;
 text-align: left;
 background-color: #fff;
+border: none;
 }
 
 body, h1, h2, h3, h4, h5 {
@@ -160,6 +161,7 @@ color: #856404;
 display: grid; 
 grid-template-columns: 1fr 1fr 1fr;
 grid-column-gap: 2em;
+border: none;
 }
 .app-header__header {
   max-width: 100%;
@@ -302,6 +304,7 @@ body {
   flex-direction: column;
   padding-left: 0;
   margin-bottom: 0;
+  border: none;
 }
 .spotlight__description {
   margin-bottom: 0;
@@ -342,6 +345,7 @@ hr {
   padding: 0.75rem 1.25rem;
   margin-bottom: -1px;
   background-color: #fff;
+  border: none;
 }
 
 h2 {
