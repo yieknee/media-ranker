@@ -56,6 +56,16 @@
       <% end %>
     </section>
 
+    <% if @validation_error %>
+      <ul class="errors">
+        <% @validation_error.each do |column, message| %>
+          <li>
+            <strong><%= column.capitalize %></strong> <%= message %>
+          </li>
+        <% end %>
+      </ul>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>
